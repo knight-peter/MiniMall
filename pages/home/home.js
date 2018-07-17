@@ -1,5 +1,5 @@
 // pages/home/home.js
-import {Home} from './home-model.js'
+import Home from './home-model'
 const home = new Home()
 
 Page({
@@ -15,6 +15,9 @@ Page({
   },
   _loadData:function(){
     let id = 1;
-    let data = home.getBannerData(id);
-  }
+    let data = home.getBannerData(id,(res)=>{
+      console.log('头部banner：',res)
+    });
+  },
+  
 })
