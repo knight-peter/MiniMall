@@ -3,7 +3,7 @@
 <view class='container home-container'>
   <swiper indicator-dots="true" autoplay="true" circular="true" class='swiper'>
     <block wx:for='{{bannerArr}}' wx:key="{{item.key_word}}">
-      <swiper-item class="banner-item">
+      <swiper-item class="banner-item" data-id='{{item.key_word}}' bindtap='onProductsItemTap'>
         <image class='item-image' lazy-load='true' src='http://www.xcs.com/images/{{item.img.url}}' mode="aspectFill"></image>
       </swiper-item>
     </block>
@@ -16,10 +16,10 @@
       </view>
       <view class='theme-box'>
         <block wx:for="{{themeArr}}" wx:key="{{item.id}}">
-          <view wx:if="{{item.id===3}}" class='theme-item big' data-id='{{item.id}}' data-name="{{item.name}}">
+          <view bindtap='onThemesItemTap' wx:if="{{index===2}}" class='theme-item big' data-id='{{item.id}}' data-name="{{item.name}}">
             <image src='http://www.xcs.com/images{{item.head_img.url}}'></image>
           </view>
-          <view wx:else class='theme-item' data-id='{{item.id}}' data-name='{{item.name}}'>
+          <view bindtap='onThemesItemTap' wx:else class='theme-item' data-id='{{item.id}}' data-name='{{item.name}}'>
             <image src='http://www.xcs.com/images{{item.topic_img.url}}'></image>
           </view>
         </block>

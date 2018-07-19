@@ -34,6 +34,7 @@ class Home extends Base {
     }
     this.request(params)
   }
+  
 }
 
 export default Home

@@ -23,6 +23,16 @@ class Base{
       }
     })
   }
+  /* 获得元素上绑定的值 */
+  getDataSet(event, key) {
+    return event.currentTarget.dataset[key]
+  }
+  /*动态设置当前页面的标题*/
+  setPageTitle(title) {
+    wx.setNavigationBarTitle({
+      title: title,
+    });
+  }
 }
 
 export default Base
