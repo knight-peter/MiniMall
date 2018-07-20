@@ -2,7 +2,8 @@ import Config from './config'
 
 class Base{
   constructor(){
-    this.baseRequestUrl =Config.restUrl
+    this.baseRequestUrl =Config.restUrl;
+    this.baseImgUrl = Config.baseImgUrl;
   }
 
   request(params){

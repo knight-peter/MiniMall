@@ -42,6 +42,7 @@ Page({
   /* 页面跳转 */
   onProductsItemTap:function(event){
     var id = home.getDataSet(event,'id')
+    // console.log(event)
     wx.navigateTo({
       url:`../product/product?id=${id}`
     })

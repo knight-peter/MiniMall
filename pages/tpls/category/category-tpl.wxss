@@ -1,5 +1,4 @@
 .category-detail-box{
-    overflow: hidden;
     padding: 20px;
 }
 .category-header{
@@ -18,7 +17,7 @@
     justify-content: center;
 }
 .category-title text{
-    font-size: 24rpx;
+    font-size: 12px;
     color:#AB956D;
 }
 .category-title text::before,.category-title text::after{
@@ -50,6 +49,6 @@
 }
 .category-goods-items view {
     color:#444452;
-    font-size: 24rpx;
+    font-size: 12px;
 
 }

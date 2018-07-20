@@ -59,7 +59,7 @@
   line-height: 60rpx;
   border:1rpx solid #fff;
   text-align: center;
-  font-size: 24rpx;
+  font-size: 12px;
 }
 .theme-item image{
   height: 100%;

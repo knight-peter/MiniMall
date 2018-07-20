@@ -29,5 +29,5 @@
   font-size: 28rpx;
 }
 .products-item-bottom .price{
-  font-size: 24rpx;
+  font-size: 12px;
 }

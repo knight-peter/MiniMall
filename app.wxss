@@ -8,3 +8,6 @@
   background-color: #fff;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", STHeiti,  sans-serif;
 }
+view,text{
+  font-size: 12px;
+}

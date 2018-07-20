@@ -1,4 +1,7 @@
 //app.js
 App({
 
+  globalData:{
+    
+  }
 })

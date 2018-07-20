@@ -26,7 +26,7 @@
   width: 64rpx;
 }
 .fiexd-cart view{
-  font-size: 24rpx;
+  font-size: 12px;
   background-color: #AB956D;
   color: white;
   position: absolute;
@@ -67,7 +67,7 @@
 .product-counts,.add-cart-btn{
   height: 100%;
   display: flex;
-  font-size: 24rpx;
+  font-size: 12px;
   align-items: center;
   justify-content: center;
 }
@@ -149,7 +149,7 @@
   margin: 20rpx auto;
 }
 .basic-info-box .stock{
-  font-size: 24rpx;
+  font-size: 12px;
 }
 .basic-info-box .stock.no{
   color:#B42F2D;
@@ -170,6 +170,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 15rpx;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .tabs-item{
   width: 33.3%;
@@ -200,7 +203,7 @@
 .properties-item{
   display: flex;
   margin: 25rpx 0;
-  font-size:24rpx;
+  font-size:12px;
 }
 .properties-name{
   width: 160rpx;
@@ -215,7 +218,7 @@
 
 
 .product-detail-protect view{
-  font-size: 24rpx;
+  font-size: 12px;
   color:808080;
   text-align: center;
   margin-top: 30rpx;

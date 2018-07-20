@@ -11,7 +11,9 @@ Page({
     id:null,
     product:null,
     countsArray:[1,2,3,4,5,6,7,8,9,10],
-    productCount:1
+    productCount:1,
+    tabs: ['商品详情', '产品参数', '售后保障'],
+    currentTabsIndex:0
   },
 
   /**
@@ -89,6 +91,13 @@ Page({
   bindPickerChange:function(event){
     this.setData({
       productCount: this.data.countsArray[event.detail.value]
+    })
+  },
+  /*选项卡*/
+  onTabsItemTap:function(event){
+    let index=product.getDataSet(event,'index');//获取data-index的值
+    this.setData({
+      currentTabsIndex:index
     })
   }
 })
