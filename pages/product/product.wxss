@@ -26,16 +26,17 @@
   width: 64rpx;
 }
 .fiexd-cart view{
-  font-size: 12px;
+  font-size: 24rpx;
   background-color: #AB956D;
   color: white;
   position: absolute;
   right: 64rpx;
-  top: 0rpx;
+  top: -5rpx;
   height: 36rpx;
   width: 36rpx;
   line-height: 36rpx;
   border-radius: 36rpx;
+  padding:6rpx;
   text-align: center;
 }
 .fiexd-cart.animate{
@@ -93,8 +94,8 @@
 }
 
 .small-top-img{
-  height: 160rpx;
-  width: 160rpx;
+  height: 200rpx;
+  width: 200rpx;
   right:6rpx;
   position: absolute;
   opacity: 0;
