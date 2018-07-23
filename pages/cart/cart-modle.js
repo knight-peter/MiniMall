@@ -10,6 +10,12 @@ class Cart extends Base{
     super();
     this._storageKeyName='cart';
   }
+
+  /*本地缓存 保存／更新*/
+  execSetStorageSync(data) {
+    wx.setStorageSync(this._storageKeyName, data);
+  };
+
   /*
   * 加入到购物车
   * 如果之前没有样的商品，则直接添加一条新的记录， 数量为 counts
@@ -28,7 +34,7 @@ class Cart extends Base{
     }else{
       cartData[isHasInfo.index].counts += counts;
     }
-    wx.setStorageSync(this._storageKeyName, cartData);
+    this.execSetStorageSync(cartData);
   }
   /*
   * 从缓存中读取购物车数据
@@ -79,6 +85,53 @@ class Cart extends Base{
       }
     }
     return result;
+  }
+  /*
+    * 修改商品数目
+    * params:
+    * id - {int} 商品id
+    * counts -{int} 数目
+    * */
+  _changeCounts(id,counts){
+    let cartData = this.getCartDataFromLocal(),//获得购物车商品总数目
+      hasInfo = this._isHasThatOne(id, cartData);//判断购物车中是否已经存在该商品
+    if(hasInfo.index !=-1){
+      if(hasInfo.data.counts>1){
+        cartData[hasInfo.index].counts+=counts;
+      }
+    }
+    this.execSetStorageSync(cartData);//更新本地缓存
+  }
+
+  /*
+  * 购物车增加商品数目
+  * */
+  addCounts(id){
+    this._changeCounts(id,1)
+  }
+
+  /*
+  * 购物车减少商品数量
+  * */
+  cutCounts(id){
+    this._changeCounts(id,-1)
+  }
+  /*
+  * 删除某些商品,ids是个数组
+  */
+  delete(ids) {
+    // 如果ids不是数组，那就把ids转换成数组，instanceof是es6的方法
+    if (!(ids instanceof Array)) {
+      ids = [ids];
+    }
+    var cartData = this.getCartDataFromLocal();
+    for (let i = 0; i < ids.length; i++) {
+      var hasInfo = this._isHasThatOne(ids[i], cartData);
+      if (hasInfo.index != -1) {
+        cartData.splice(hasInfo.index, 1);  //删除数组某一项
+      }
+    }
+    this.execSetStorageSync(cartData);
   }
 }
 

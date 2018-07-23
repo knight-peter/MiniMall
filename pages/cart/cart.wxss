@@ -139,14 +139,13 @@
 }
 
 .price-text{
-    width: 30%;
+    width: 35%;
     font-size: 28rpx;
     margin-left: 10rpx;
 
 }
 .arrow-icon{
-    width:20%;
-    justify-content: flex-end
+    width:15%;
 }
 .arrow-icon image{
     display: inline-block;
